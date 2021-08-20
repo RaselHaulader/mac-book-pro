@@ -1,12 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap css cdn link  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
     <title>Mac-book-pro</title>
 </head>
+
 <body>
-    
+    <main>
+        <section class="container">
+            <div class="row mt-5">
+                <div class="col-6  d-flex justify-content-center">
+                    <div class="w-75"><img src="images/mac.png" class="w-100" alt=""></div>
+                </div>
+                <div class="col-6">
+                    <!-- details of mac book pro  -->
+                    <div>
+                        <h1>
+                            Customize your Blue 24-inch iMac with Apple M1 chip.
+                        </h1>
+                        <p>Apple M1 chip with 8-core CPU with performance cores and 4 efficiency cores, 7 core GPU
+                            16-core Neural Engine 8GB unified 256GB SSD storage. Two Thunderbolts / USB 5 ports. Magic
+                            Mouse Magic keyboard. US English</p>
+                    </div>
+                    <!-- select memory option  -->
+                    <div class="mt-5">
+                        <h6 class="fw-bolder">Memory</h6>
+                        <button onclick="setPrice('memory-price',0)" class="btn btn-outline-dark">8GB Unified
+                            Memory</button>
+                        <button onclick="setPrice('memory-price',180)" class="btn btn-outline-dark">16GB Unified
+                            Memory</button>
+                    </div>
+                    <!-- select storage option  -->
+                    <div class="mt-5">
+                        <h6 class="fw-bolder">Storage</h6>
+                        <button onclick="setPrice('storage-price',0)" class="btn btn-outline-dark">256GB SSD
+                            Storage</button>
+                        <button onclick="setPrice('storage-price',100)" class="btn btn-outline-dark">512GB SSD
+                            Storage</button>
+                        <button onclick="setPrice('storage-price',180)" class="btn btn-outline-dark">1TB SSD
+                            Storage</button>
+                    </div>
+                    <!-- select delivery option  -->
+                    <div class="mt-5">
+                        <h6 class="fw-bolder">Choose your delivery option</h6>
+                        <button onclick="setPrice('delivery-price',0)" class="btn btn-outline-dark">Friday, Aug 25 FREE
+                            Prime Delivery</button>
+                        <button onclick="setPrice('delivery-price',20)" class="btn btn-outline-dark">Friday, Aug 21
+                            Delivery Charge $20</button>
+                    </div>
+                    <!-- calculation price section  -->
+                    <div class="mt-5">
+                        <table class="table w-50">
+                            <tbody>
+                                <tr>
+                                    <th>
+                                        <h6 class="fw-bolder">Best Price</h6>
+                                    </th>
+                                    <th>
+                                        <h6 class="fw-bolder">$<span id="best-price" class="price">1299</span></h6>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <h6 class="fw-bolder">Extra Memory Cost</h6>
+                                    </th>
+                                    <th>
+                                        <h6 class="fw-bolder">$<span id="memory-price" class="price">0</span></h6>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <h6 class="fw-bolder">Extra Storage Cost</h6>
+                                    </th>
+                                    <th>
+                                        <h6 class="fw-bolder">$<span id="storage-price" class="price">0</span></h6>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <h6 class="fw-bolder">Delivery Charge</h6>
+                                    </th>
+                                    <th>
+                                        <h6 class="fw-bolder">$<span id="delivery-price" class="price">0</span></h6>
+                                    </th>
+                                </tr>
+                            </tbody>
+                            <tr>
+                                <th>
+                                    <h6 class="fw-bolder">Total Price</h6>
+                                </th>
+                                <th>
+                                    <h6 class="fw-bolder">$<span id="total-price">0</span></h6>
+                                </th>
+                            </tr>
+                        </table>
+                    </div>
+                    <!-- promo code  -->
+                    <div class="mt-4">
+                        <h5>Add promo code</h5>
+                        <input class="border  border-1" type="text"> <button class="btn btn-danger promo-btn">Apply</button>
+                    </div>
+                </div>
+
+            </div>
+            <hr>
+            <h1 class="text-center fw-bold">Total: $ <span>0</span> </h1>
+
+        </section>
+    </main>
+    <!-- js link  -->
+    <script src="js/script.js"></script>
 </body>
+
 </html>
