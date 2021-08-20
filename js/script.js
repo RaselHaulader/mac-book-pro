@@ -15,8 +15,16 @@ function calculateTotal() {
         totalPrice+= parseInt(price.innerText)
     }
     elementsText('total-price').innerText = totalPrice
+    elementsText('last-total').innerText = totalPrice
 }
 
 document.querySelector('.promo-btn').addEventListener('click', function () {
-    console.log('click')
+    const promoCode = document.getElementById('promo-input').value
+    console.log(promoCode)
+    if (promoCode == 'stevekaku') {
+        const total = elementsText('total-price').innerText
+        const promoDiscount = parseInt(total) / 5
+        elementsText('last-total').innerText =  parseInt(total) - promoDiscount
+        elementsText('promo-input').value = ''
+    }
 })
