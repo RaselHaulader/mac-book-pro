@@ -12,7 +12,7 @@ function calculateTotal() {
     };
     document.getElementById('total-price').innerText = totalPrice;
     document.getElementById('last-total').innerText = totalPrice;
-    discountMassage('block', 'none');
+    discountMassage('none');
 };
 // discount with promo code
 document.querySelector('.promo-btn').addEventListener('click', function () {
@@ -22,12 +22,11 @@ document.querySelector('.promo-btn').addEventListener('click', function () {
         const promoDiscount = parseInt(total) / 5;
         document.getElementById('last-total').innerText = parseInt(total) - promoDiscount;
         document.getElementById('promo-input').value = '';
-        discountMassage('none', 'block');
+        discountMassage('block');
         document.getElementById('discount-amount').innerText = promoDiscount;
     };
 });
 // promo discount massage show
-function discountMassage(view1, view2) {
-    document.getElementById('promo-container').style.display = view1;
-    document.getElementById('congratulation').style.display = view2;
+function discountMassage(view1) {
+    document.getElementById('congratulation').style.display = view1;
 };
